@@ -19,5 +19,6 @@ message risemo.raw.NMEA0183 [id = 10001] {
 }
 
 message risemo.raw.NMEA2000 [id = 10002] {
-  string frame [id = 1];
+  string header [id = 1];
+  string data [id = 2];
 }
