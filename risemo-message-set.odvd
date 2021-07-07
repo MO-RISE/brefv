@@ -22,3 +22,8 @@ message risemo.raw.NMEA2000 [id = 10002] {
   string header [id = 1];
   string data [id = 2];
 }
+
+message risemo.raw.LWE450 [id = 10003] {
+  string header [id = 1];
+  string payload [id = 2];
+}
