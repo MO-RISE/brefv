@@ -1,6 +1,6 @@
 # brefv
 
-A public message set aimed at nautical usecases maintained by Maritime Operations - RISE.
+A public message set aimed at maritime usecases maintained by Maritime Operations - RISE.
 
 ## odvd-format
 TODO: describe and argue for why
