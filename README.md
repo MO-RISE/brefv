@@ -1,3 +1,9 @@
-# risemo-message-set
+# brefv
 
-A common message set aimed at nautical usecases for libcluon-based microservices maintained by RISE Maritime Operations
+A public message set aimed at nautical usecases maintained by Maritime Operations - RISE.
+
+## odvd-format
+TODO: describe and argue for why
+
+## How-to-use
+TODO: libcluon, cluon-msc, protobuf, pycluon etc

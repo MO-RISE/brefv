@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-message risemo.raw.NMEA0183 [id = 10001] {
+message morise.raw.NMEA0183 [id = 10001] {
   string sentence [id = 1];
 }
 
-message risemo.raw.NMEA2000 [id = 10002] {
+message morise.raw.NMEA2000 [id = 10002] {
   string header [id = 1];
   string data [id = 2];
 }
 
-message risemo.raw.LWE450 [id = 10003] {
+message morise.raw.LWE450 [id = 10003] {
   string header [id = 1];
   string payload [id = 2];
 }
