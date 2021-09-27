@@ -1,0 +1,70 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://mo-rise.github.com/brefv/envelope.json",
+    "type": "object",
+    "title": "Envelope",
+    "description": "An envelope including relevant timestamps, sender id and data type for any kind of message",
+    "examples": [
+      {
+        "sampled_at": 1632746168.503,
+        "sent_at": 1632746168.743,
+        "data": {},
+        "sender_id": "Bertil",
+        "data_type": "EngineRPM"
+      }
+    ],
+    "required": [
+      "sampled_at",
+      "sent_at",
+      "data",
+      "sender",
+      "data_type"
+    ],
+    "properties": {
+      "sampled_at": {
+        "$id": "#/properties/sampled_at",
+        "type": "number",
+        "title": "Sample timestamp",
+        "description": "The unix timestamp in seconds at which `data` was sampled.",
+        "examples": [
+          1632746168.503
+        ]
+      },
+      "sent_at": {
+        "$id": "#/properties/sent_at",
+        "type": "number",
+        "title": "Sent timestamp",
+        "description": "The unix timestamp in seconds at which `data` was sent.",
+        "examples": [
+          1632746168.743
+        ]
+      },
+      "data": {
+        "$id": "#/properties/data",
+        "type": "object",
+        "title": "Message data",
+        "description": "The message contained by this envelope",
+        "minProperties": 1,
+        "additionalProperties": true
+      },
+      "sender_id": {
+        "$id": "#/properties/sender_id",
+        "type": "string",
+        "title": "Sender ID",
+        "description": "The unique identifier of the sender instance",
+        "examples": [
+          "Bertil"
+        ]
+      },
+      "data_type": {
+        "$id": "#/properties/data_type",
+        "type": "string",
+        "title": "Message data type identifier",
+        "description": "A unique identifier of the data type carried by this envelope",
+        "examples": [
+          "EngineRPM"
+        ]
+      }
+    },
+    "additionalProperties": false
+}
