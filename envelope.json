@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://mo-rise.github.com/brefv/envelope.json",
   "type": "object",
   "title": "Envelope",
   "description": "An envelope containing a payload. The envelope also carries metadata such as relevant timestamps, sender id and payload type",

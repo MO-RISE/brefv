@@ -1,6 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://mo-rise.github.com/brefv/payloads/position.json",
   "type": "object",
   "title": "Attitude",
   "description": "The attitude of the vessel given as Euler angles according to the Yaw-Pitch-Roll convention in a North-East-Down coordinate system",
