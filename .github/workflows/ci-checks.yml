@@ -28,4 +28,25 @@ jobs:
     - name: Check validity of json schemas
       run: |
         jsonschema -i envelope.json meta_schema.json
-        jsonschema -i position.json meta_schema.json
+        jsonschema \
+          -i payloads/position.json \
+          -i payloads/attitude.json \
+          meta_schema.json
+
+  model_generation:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install datamodel-code-generator[http]
+    - name: Check that we can generate pydantic models from the schemas
+      run: |
+        datamodel-codegen --input envelope.json --input-file-type jsonschema --output envelope.py
+        datamodel-codegen --input payloads --input-file-type jsonschema  --reuse-model --output payloads

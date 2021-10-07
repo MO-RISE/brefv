@@ -1,70 +1,78 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://mo-rise.github.com/brefv/envelope.json",
-    "type": "object",
-    "title": "Envelope",
-    "description": "An envelope including relevant timestamps, sender id and data type for any kind of message",
-    "examples": [
-      {
-        "sampled_at": 1632746168.503,
-        "sent_at": 1632746168.743,
-        "data": {},
-        "sender_id": "Bertil",
-        "data_type": "EngineRPM"
-      }
-    ],
-    "required": [
-      "sampled_at",
-      "sent_at",
-      "data",
-      "sender",
-      "data_type"
-    ],
-    "properties": {
-      "sampled_at": {
-        "$id": "#/properties/sampled_at",
-        "type": "number",
-        "title": "Sample timestamp",
-        "description": "The unix timestamp in seconds at which `data` was sampled.",
-        "examples": [
-          1632746168.503
-        ]
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://mo-rise.github.com/brefv/envelope.json",
+  "type": "object",
+  "title": "Envelope",
+  "description": "An envelope containing a payload. The envelope also carries metadata such as relevant timestamps, sender id and payload type",
+  "examples": [
+    {
+      "payload_sampled_at": "2021-10-07T20:20:39.345+00:00",
+      "sealed_at": "2021-10-07T20:20:39.845+00:00",
+      "payload": {
+        "position": {
+          "type": "Point",
+          "coordinates": [
+            11,
+            56
+          ]
+        }
       },
-      "sent_at": {
-        "$id": "#/properties/sent_at",
-        "type": "number",
-        "title": "Sent timestamp",
-        "description": "The unix timestamp in seconds at which `data` was sent.",
-        "examples": [
-          1632746168.743
-        ]
-      },
-      "data": {
-        "$id": "#/properties/data",
-        "type": "object",
-        "title": "Message data",
-        "description": "The message contained by this envelope",
-        "minProperties": 1,
-        "additionalProperties": true
-      },
-      "sender_id": {
-        "$id": "#/properties/sender_id",
-        "type": "string",
-        "title": "Sender ID",
-        "description": "The unique identifier of the sender instance",
-        "examples": [
-          "Bertil"
-        ]
-      },
-      "data_type": {
-        "$id": "#/properties/data_type",
-        "type": "string",
-        "title": "Message data type identifier",
-        "description": "A unique identifier of the data type carried by this envelope",
-        "examples": [
-          "EngineRPM"
-        ]
-      }
+      "sender_uuid": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
+      "payload_type": "https://mo-rise.github.com/brefv/payloads/position.json"
+    }
+  ],
+  "required": [
+    "sender_uuid",
+    "sealed_at",
+    "payload_type",
+    "payload_sampled_at",
+    "payload"
+  ],
+  "properties": {
+    "sender_uuid": {
+      "type": "string",
+      "format": "uuid",
+      "title": "Sender UUID",
+      "description": "The unique identifier of the sender instance",
+      "examples": [
+        "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a"
+      ]
     },
-    "additionalProperties": false
+    "sealed_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Envelope sealed timestamp",
+      "description": "The ISO8601 date and timestamp at which `envelope` was sealed.",
+      "examples": [
+        "2021-10-07T20:20:39.845+00:00"
+      ]
+    },
+    "payload_type": {
+      "type": "string",
+      "format": "uri",
+      "title": "Payload type definition",
+      "description": "A reference to a jsonschema defining the payload type carried by this envelope",
+      "examples": [
+        "https://mo-rise.github.com/brefv/payloads/position.json"
+      ]
+    },
+    "payload_sampled_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Payload timestamp",
+      "description": "The ISO8601 date and timestamp at which `payload` was sampled.",
+      "examples": [
+        "2021-10-07T20:20:39.345+00:00"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "title": "Payload",
+      "description": "The payload contained by this envelope",
+      "minProperties": 1,
+      "maxProperties": 1,
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
 }

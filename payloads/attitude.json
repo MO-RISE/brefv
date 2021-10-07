@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mo-rise.github.com/brefv/payloads/position.json",
+  "type": "object",
+  "title": "Attitude",
+  "description": "The attitude of the vessel given as Euler angles according to the Yaw-Pitch-Roll convention in a North-East-Down coordinate system",
+  "required": [
+    "yaw"
+  ],
+  "properties": {
+    "roll": {
+      "type": "number",
+      "title": "Roll angle",
+      "description": "Roll angle of vessel [radians], positive to starboard",
+      "examples": [
+        0.0
+      ],
+      "default": 0.0
+    },
+    "pitch": {
+      "type": "number",
+      "title": "Pitch angle",
+      "description": "Pitch angle of vessel [radians], positive bow up",
+      "examples": [
+        0.0
+      ],
+      "default": 0.0
+    },
+    "yaw": {
+      "type": "number",
+      "title": "Yaw angle",
+      "description": "Yaw angle of vessel (i.e. heading)[radians], positive bow to starboard",
+      "examples": [
+        0.0
+      ]
+    }
+  },
+  "additionalProperties": false
+}
