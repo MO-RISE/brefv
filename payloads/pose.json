@@ -1,12 +1,16 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "Attitude",
-  "description": "The attitude of the vessel given as Euler angles according to the Yaw-Pitch-Roll convention in a North-East-Down coordinate system",
+  "title": "Pose",
+  "description": "The pose of the vessel given as a combination of a GeoJSON Point (lon, lat, z) and Euler angles according to the Yaw-Pitch-Roll convention in a North-East-Down coordinate system",
   "required": [
+    "position",
     "yaw"
   ],
   "properties": {
+    "position": {
+      "$ref": "http://geojson.org/schema/Point.json"
+    },
     "roll": {
       "type": "number",
       "title": "Roll angle",
