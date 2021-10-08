@@ -1,0 +1,65 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "title": "Kinematics",
+    "description": "The kinematic state of the vessel, given in a right-handed, body-fixed coordinate system",
+    "required": [
+        "vx",
+        "vy",
+        "yaw_rate"
+    ],
+    "properties": {
+        "vx": {
+            "type": "number",
+            "title": "Velocity in x-direction",
+            "description": "X-component of linear velocity [m/s], positive forward",
+            "examples": [
+                0.0
+            ]
+        },
+        "vy": {
+            "type": "number",
+            "title": "Velocity in y-direction",
+            "description": "Y-component of linear velocity [m/s], positive to starboard",
+            "examples": [
+                0.0
+            ]
+        },
+        "vz": {
+            "type": "number",
+            "title": "Velocity in z-direction",
+            "description": "Z-component of linear velocity [m/s], positive downwards",
+            "examples": [
+                0.0
+            ],
+            "default": 0.0
+        },
+        "roll_rate": {
+            "type": "number",
+            "title": "Angular velocity around x-axis",
+            "description": "X-component of angular velocity [radians/s], positive starboard side down",
+            "examples": [
+                0.0
+            ],
+            "default": 0.0
+        },
+        "pitch_rate": {
+            "type": "number",
+            "title": "Angular velocity around y-axis",
+            "description": "Y-component of angular velocity [radians/s], positive bow up",
+            "examples": [
+                0.0
+            ],
+            "default": 0.0
+        },
+        "yaw_rate": {
+            "type": "number",
+            "title": "Angular velocity around y-axis",
+            "description": "Z-component of angular velocity [radians/s], positive bow to starboard",
+            "examples": [
+                0.0
+            ]
+        }
+    },
+    "additionalProperties": false
+}
