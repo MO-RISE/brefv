@@ -1,0 +1,129 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "mmsi": 124716291,
+            "imo_number": 214617214,
+            "draught": 1241.782,
+            "type_and_cargo": 23,
+            "ship_name": "Boaty McBoatface",
+            "call_sign": "OWIP2",
+            "destination": "Gothenburg",
+            "eta": "2021-10-07T20:20:39.345+00:00",
+            "length": 123,
+            "beam": 12,
+            "pose": {},
+            "twist": {}
+        }
+    ],
+    "required": [
+        "mmsi",
+        "imo_number",
+        "draught",
+        "type_and_cargo",
+        "ship_name",
+        "call_sign",
+        "destination",
+        "eta",
+        "length",
+        "beam",
+        "pose",
+        "twist"
+    ],
+    "properties": {
+        "mmsi": {
+            "type": "integer",
+            "title": "MMSI",
+            "description": "MMSI number of the AIS transceiver",
+            "examples": [
+                124716291
+            ]
+        },
+        "imo_number": {
+            "type": "integer",
+            "title": "IMO number",
+            "description": "IMO number of the vessel",
+            "examples": [
+                214617214
+            ]
+        },
+        "draught": {
+            "type": "number",
+            "title": "Draught",
+            "description": "Draught of this vessel",
+            "examples": [
+                12.6
+            ]
+        },
+        "type_and_cargo": {
+            "type": "integer",
+            "title": "Type and cargo indicator",
+            "description": "Type and cargo indicator of this vessel, according to: ",
+            "examples": [
+                60
+            ]
+        },
+        "ship_name": {
+            "type": "string",
+            "title": "Ship name",
+            "description": "The name of this vessel",
+            "examples": [
+                "Boaty McBoatface"
+            ]
+        },
+        "call_sign": {
+            "type": "string",
+            "title": "Call sign",
+            "description": "The call sign of this vessel",
+            "examples": [
+                "OWIP2"
+            ]
+        },
+        "destination": {
+            "type": "string",
+            "title": "Destination",
+            "description": "The destination of this vessel",
+            "examples": [
+                "Gothenburg"
+            ]
+        },
+        "eta": {
+            "type": "string",
+            "format": "date-time",
+            "title": "ETA",
+            "description": "The ETA to `destination` of this vessel",
+            "examples": [
+                "2021-10-07T20:20:39.345+00:00"
+            ]
+        },
+        "loa": {
+            "type": "number",
+            "title": "LOA",
+            "description": "The length over all (LOA) of this vessel [m]",
+            "examples": [
+                123
+            ]
+        },
+        "beam": {
+            "type": "number",
+            "title": "Beam",
+            "description": "The beam of this vessel [m]",
+            "default": 0,
+            "examples": [
+                12
+            ]
+        },
+        "pose": {
+            "$ref": "https://mo-rise.github.com/brefv/payloads/pose.json"
+        },
+        "twist": {
+            "$ref": "https://mo-rise.github.com/brefv/payloads/twist.json"
+        }
+    },
+    "additionalProperties": false
+}

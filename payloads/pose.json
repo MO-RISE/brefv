@@ -9,6 +9,7 @@
   ],
   "properties": {
     "position": {
+      "description": "Position of vessel reference point",
       "$ref": "http://geojson.org/schema/Point.json"
     },
     "roll": {
