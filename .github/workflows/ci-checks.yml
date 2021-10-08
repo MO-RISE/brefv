@@ -28,10 +28,7 @@ jobs:
     - name: Check validity of json schemas
       run: |
         jsonschema -i envelope.json meta_schema.json
-        jsonschema \
-          -i payloads/position.json \
-          -i payloads/attitude.json \
-          meta_schema.json
+        for f in payloads/*.json; do jsonschema -i $f meta_schema.json; done
 
   model_generation:
 
