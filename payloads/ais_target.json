@@ -1,6 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://example.com/example.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
     "title": "AIS target",
     "description": "A fully specified (data merged from AIS messages 1,2,3 and 5) AIS target message",
@@ -129,10 +128,10 @@
             ]
         },
         "pose": {
-            "$ref": "https://mo-rise.github.com/brefv/payloads/pose.json"
+            "$ref": "https://mo-rise.github.io/brefv/payloads/pose.json"
         },
         "twist": {
-            "$ref": "https://mo-rise.github.com/brefv/payloads/twist.json"
+            "$ref": "https://mo-rise.github.io/brefv/payloads/twist.json"
         }
     },
     "additionalProperties": false
