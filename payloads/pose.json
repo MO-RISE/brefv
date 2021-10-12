@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Pose",
-  "description": "The pose of the vessel given as a combination of a GeoJSON Point (lon, lat, z) and Euler angles according to the Yaw-Pitch-Roll convention in a North-East-Down coordinate system",
+  "description": "The pose of the vessel given as a combination of a GeoJSON Point (lon, lat, z) and Euler angles according to the Yaw-Pitch-Roll convention.",
   "required": [
     "position",
     "yaw"
   ],
   "properties": {
     "position": {
-      "description": "Position of vessel reference point",
+      "description": "Position of vessel reference point, according to: https://datatracker.ietf.org/doc/html/rfc7946#section-4",
       "$ref": "http://geojson.org/schema/Point.json"
     },
     "roll": {

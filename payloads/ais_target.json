@@ -2,14 +2,15 @@
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
+    "title": "AIS target",
+    "description": "A fully specified (data merged from AIS messages 1,2,3 and 5) AIS target message",
     "default": {},
     "examples": [
         {
             "mmsi": 124716291,
             "imo_number": 214617214,
             "draught": 1241.782,
+            "navigational_status": 0,
             "type_and_cargo": 23,
             "ship_name": "Boaty McBoatface",
             "call_sign": "OWIP2",
@@ -25,6 +26,7 @@
         "mmsi",
         "imo_number",
         "draught",
+        "navigational_status",
         "type_and_cargo",
         "ship_name",
         "call_sign",
@@ -60,10 +62,18 @@
                 12.6
             ]
         },
+        "navigational_status": {
+            "type": "integer",
+            "title": "Navigational status",
+            "description": "Navigational status this vessel, enum values according to AIS specification",
+            "examples": [
+                0
+            ]
+        },
         "type_and_cargo": {
             "type": "integer",
             "title": "Type and cargo indicator",
-            "description": "Type and cargo indicator of this vessel, according to: ",
+            "description": "Type and cargo indicator of this vessel, according to: https://www.navcen.uscg.gov/pdf/AIS/AISGuide.pdf",
             "examples": [
                 60
             ]
