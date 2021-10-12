@@ -18,7 +18,7 @@
         "yaw": 0.0
       },
       "sender_uuid": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
-      "payload_type": "https://mo-rise.github.com/brefv/payloads/pose.json"
+      "payload_type": "https://mo-rise.github.io/brefv/payloads/pose.json"
     }
   ],
   "required": [
