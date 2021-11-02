@@ -1,0 +1,54 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "title": "AIS vessel",
+    "description": "Data of a specific vessel communicated through one or several types of AIS messages.",
+    "required": [
+        "timestamp",
+        "mmsi",
+        "class",
+        "pose",
+        "sog",
+        "cog",
+        "position_accuracy"
+    ],
+    "properties": {
+        "mmsi": {
+            "type": "integer",
+            "title": "MMSI",
+            "description": "MMSI number of the AIS transceiver.",
+            "examples": [
+                124716291
+            ]
+        },
+        "class": {
+            "type": "string",
+            "enum": ["A","B"],
+            "title": "class",
+            "description": "Class of the AIS transceiver, defined by the AIS messages communicating the data of the vessel (A: messages 1,2,3, and 5; B: messages 18, 19, and 24)."
+        },
+        "pose": {
+            "type": "object",
+            "title": "Pose",
+            "description": "Pose of the vessel.",
+            "$ref": "https://raw.githubusercontent.com/brefv/messages/core/pose.json"
+        },
+        "sog": {
+            "type": "number",
+            "title": "SOG",
+            "description": "Speed Over Ground of the vessel [knots]."
+        },
+        "cog": {
+            "type": "number",
+            "title": "COG",
+            "description": "Course Over Ground of the vessel with respect to True North [radians]"
+        },
+        "position_accuracy": {
+            "type": "string",
+            "enum": ["high", "low"],
+            "title": "Position accuracy",
+            "description": "Accuracy of the position (high <= 10 meters; low > 10 meters)."
+        }
+    }
+
+}

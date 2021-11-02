@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "title": "GNSS",
+    "description": "Data from a GNSS sensor",
+    "default": {},
+    "required": [
+        "position"
+    ],
+    "properties": {
+        "pose": {
+            "type": "object",
+            "title": "Pose",
+            "description": "Pose of the GNSS sensor",
+            "$ref": "https://raw.githubusercontent.com/brefv/messages/core/pose.json"
+        },
+        "semi_major_axis":{
+            "type": "number",
+            "title": "Semi-major axis",
+            "description": "Semi-major axis of the GNSS sensor's error ellipse for 1 standard deviation"
+        },
+        "semi_minor_axis":{
+            "type": "number",
+            "title": "Semi-minor axis",
+            "description": "Semi-minor axis of the GNSS sensor's error ellipse for 1 standard deviation"
+        },
+        "azimuth":{
+            "type": "number",
+            "title": "Azimuth",
+            "description": "Azimuth of the semi-major axis of the GNSS sensor's error ellipse with respect to True North in degrees"
+        }
+    }
+}
