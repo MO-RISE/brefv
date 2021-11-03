@@ -11,8 +11,8 @@
           "position": {
             "type": "Point",
             "coordinates": [
-              11,
-              56
+              11.0,
+              56.0
             ]
           }
         }
