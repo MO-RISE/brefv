@@ -2,7 +2,7 @@
     "$schema":"https://json-schema.org/draft/2020-12/schema",
     "type": "object",
     "title": "Envelope",
-    "description": "An envelope containing a message, its time, and the timestamp when it was sent.",
+    "description": "An envelope containing a message, the message type, and the timestamp when it was sent.",
     "examples": [
       {
         "sent_at": "2021-10-07T20:20:39.345+00:00",
