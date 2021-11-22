@@ -1,44 +1,19 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "title": "Pose",
-    "description": "The pose of a device or vehicle given as a combination of its position (longitude, latitude, and altitude of its reference point) and attitude (yaw, pitch, and roll Euler angles). The Euler angles follow the yaw-pitch-roll convention and correspond to a coordinate system where the origo is at the 'reference point', the x-axis is positive forwards, and the z-axis is positive downwards.",
-    "required": [
-      "position",
-      "reference_point_type",
-      "yaw"
-    ],
-    "properties": {
-      "position": {
-        "type": "object",
-        "title": "Reference point position",
-        "description": "Position of the reference point encoded as a GeoJSON Point",
-        "$ref": "http://geojson.org/schema/Point.json"
-      },
-      "reference_point_type": {
-          "type": "string",
-          "title": "Reference point type",
-          "desciption": "Type of reference point. For type 'ais', as depicted by Figure 41 in the ITU recommendation M.1371-5 (https://www.itu.int/rec/R-REC-M.1371-5-201402-I/en).",
-          "enum": ["center_of_mass", "center_of_geometry","ais"]
-      },
-      "yaw": {
-        "type": "number",
-        "title": "Yaw angle",
-        "description": "Yaw angle of the device or vehicle (aka. heading) [radians]",
-        "default": 0.0
-      },
-      "pitch": {
-        "type": "number",
-        "title": "Pitch angle",
-        "description": "Pitch angle of the device or vehicle [radians]",
-        "default": 0.0
-      },
-      "roll": {
-        "type": "number",
-        "title": "Roll angle",
-        "description": "Roll angle of the device or vehicle [radians]",
-        "default": 0.0
-      }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Pose",
+  "description": "The pose of a body´s geometric center given as a combination of its position and attitude.",
+  "required": [
+    "position",
+    "attitude"
+  ],
+  "properties": {
+    "position": {
+      "$ref": "./position.json"
     },
-    "additionalProperties": false
-  }
+    "attitude": {
+      "$ref": "./attitude.json"
+    }
+  },
+  "additionalProperties": false
+}

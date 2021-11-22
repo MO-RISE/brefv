@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "title": "Linear Velocity",
+    "description": "Linear velocity as [Speed along X-axis, Speed along Y-axis, Speed along Z-axis] in m/s",
+    "items": {
+        "type": "number"
+    },
+    "minItems": 3,
+    "maxItems": 3,
+    "default": [
+        0.0,
+        0.0,
+        0.0
+    ]
+}

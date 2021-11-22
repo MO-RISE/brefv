@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "title": "Moment",
+    "description": "Moment as [Moment around X-axis, Moment around Y-axis, Moment around Z-axis], given in Newtonmeters",
+    "items": {
+        "type": "number"
+    },
+    "minItems": 3,
+    "maxItems": 3,
+    "default": [
+        0.0,
+        0.0,
+        0.0
+    ]
+}

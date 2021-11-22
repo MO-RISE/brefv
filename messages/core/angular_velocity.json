@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "title": "Angular Velocity",
+    "description": "Angular velocity given as [Rate of rotation around X-axis, Rate of rotation around Y-axis, Rate of rotation around Z-axis] [rad/s] expressed in the BF frame of reference.",
+    "items": {
+        "type": "number"
+    },
+    "minItems": 3,
+    "maxItems": 3,
+    "default": [
+        0.0,
+        0.0,
+        0.0
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "title": "Force",
+    "description": "Force as [Force along X-axis, Force along Y-axis, Force along Z-axis], given in Newtons",
+    "items": {
+        "type": "number"
+    },
+    "minItems": 3,
+    "maxItems": 3,
+    "default": [
+        0.0,
+        0.0,
+        0.0
+    ]
+}
