@@ -16,7 +16,7 @@
         "rot": {
             "type": "number",
             "title": "Rate of turn",
-            "description": "Rate of turn [degrees/minute]"
+            "description": "Rate of turn [degrees/minute], positive to starboard"
         }
     }
 }

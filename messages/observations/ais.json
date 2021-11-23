@@ -57,7 +57,7 @@
         "rate_of_turn": {
             "type": "number",
             "title": "Rate of turn",
-            "description": "Rate of turn of the vessel [degrees/minute]"
+            "description": "Rate of turn of the vessel [degrees/minute], positive to starboard"
         },
         "imo_number": {
             "type": "integer",
@@ -67,7 +67,7 @@
         "draught": {
             "type": "number",
             "title": "Draught",
-            "description": "Draught of the vessel"
+            "description": "Draught of the vessel [m]"
         },
         "navigational_status": {
             "type": "string",
@@ -81,8 +81,8 @@
                 "Aground",
                 "Engaged in fishing",
                 "Under way sailing",
-                "Reserved",
-                "Reserved",
+                "High-speed craft",
+                "Wing in ground",
                 "Power-driven vessel towing astern (regional use)",
                 "Power-driven vessel pushing ahead or towing alongside (regional use)",
                 "Reserved",
