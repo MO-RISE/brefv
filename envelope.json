@@ -22,10 +22,7 @@
       "type": "string",
       "format": "uri",
       "title": "Message type",
-      "description": "A reference to a json-schema defining the message type carried by this envelope.",
-      "examples": [
-        "https://raw.githubusercontent.com/brefv/messages/sensors/position.json"
-      ]
+      "description": "A reference to a json-schema defining the message type carried by this envelope."
     },
     "message": {
       "type": "object",
