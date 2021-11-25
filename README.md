@@ -22,3 +22,14 @@ One of the prominent use cases of `brefv` is to exchange messages describing the
 * **NED (North-East-Down)** - is a **non-rotating** frame of reference fixed to the geometric center of a rigid body, with the x-y plane being the tangent plane to the WGS84 ellipsoid and the z-axis points downwards towards the centre of the earth. It is used as the reference for all `attitude`s.
 * **BF (Body Fixed)** - is a **rotating** frame of reference fixed to the geometric center of a rigid body, with its rotation defined as the `attitude` of the rigid body. This frame is used for the kinematic state of the vessel (i.e. linear velocity and angular velocity), any forces and moments reported by actuators or similar as well as to locate any onboard sensor equipment generating observations.
 
+    **BF frame for marine surface vessels**
+
+    A body-fixed frame of reference for a marine surface vessel has its axes orientated as follows:
+    
+    * The x-axis is parallel to the length of the vessel and positive towards the bow
+    * The y-axis is parallel to the breadth of the vessel and positive towards starboard
+    * The z-axis is parallel to the height of the vessel and positive towards the baseline of the hull
+
+
+## License
+Apache 2.0
