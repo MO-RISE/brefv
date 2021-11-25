@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Pose",
-  "description": "The pose of a body´s geometric center given as a combination of its position and attitude.",
+  "description": "The pose of a body given as a combination of its position and attitude.",
   "required": [
     "position",
     "attitude"
