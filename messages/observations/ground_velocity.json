@@ -19,6 +19,16 @@
             "title": "Speed over ground [knots]",
             "description": "Reported speed over ground."
         },
+        "sog_transverse_bow": {
+            "type": "number",
+            "title": "Speed over ground [knots]",
+            "description": "Reported speed over ground transverse at bow."
+        },
+        "sog_transverse_stern": {
+            "type": "number",
+            "title": "Speed over ground [knots]",
+            "description": "Reported speed over ground transverse at stern."
+        },
         "cog": {
             "type": "number",
             "title": "Course over ground",
