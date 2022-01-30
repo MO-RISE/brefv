@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "title": "Steering order angle",
+  "title": "Rudder angle order",
   "description": "Command to an steering-unit that accepts commands in vessel relative degrees",
   "required": ["target_unit_id", "angle"],
   "properties": {
