@@ -7,7 +7,7 @@
   "properties": {
     "target_unit_id": {
       "type": "string",
-      "title": "Targeted steering unit ID",
+      "title": "Rudder id.",
       "desciption": "Id of the reporting physical equipment"
     },
     "angle": {
