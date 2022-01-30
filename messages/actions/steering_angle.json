@@ -13,7 +13,7 @@
     "angle": {
       "type": "number",
       "title": "Rudder angle",
-      "description": "Rudder angle in degrees, positive when trailing edge points to port (port angel negative)"
+      "description": "Rudder angle order in degrees, positive when trailing edge points to port."
     },
     "flap_angle": {
       "type": "number",
