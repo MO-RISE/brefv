@@ -4,15 +4,15 @@
     "title": "Heading",
     "description": "Reading from a heading sensor",
     "required": [
-        "sensor_id",
+        "observation_id",
         "heading",
         "type"
     ],
     "properties": {
-        "sensor_id": {
+        "observation_id": {
             "type": "string",
-            "title": "Physical sensor id",
-            "desciption": "Id of the reporting physical sensor equipment"
+            "title": "Observation id",
+            "desciption": "Platform unique observation id"
         },
         "heading": {
             "type": "number",

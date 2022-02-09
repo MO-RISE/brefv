@@ -4,14 +4,14 @@
     "title": "Rudder",
     "description": "Reading from a rudder sensor",
     "required": [
-        "sensor_id",
+        "observation_id",
         "angle"
     ],
     "properties": {
-        "sensor_id": {
+        "observation_id": {
             "type": "string",
-            "title": "Physical sensor id",
-            "desciption": "Id of the reporting physical sensor equipment"
+            "title": "Observation id",
+            "desciption": "Platform unique observation id"
         },
         "angle": {
             "type": "number",
@@ -23,10 +23,6 @@
             "title": "Rudder flap angle",
             "description": "Rudder flap angle in degrees, positive when trailing edge points to port",
             "default": 0.0
-        },
-        "location": {
-            "description": "Location of the rudder in the BF frame of reference.",
-            "$ref": "../core/location.json"
         },
         "wrench": {
             "$ref": "../core/wrench.json"

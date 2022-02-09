@@ -4,20 +4,15 @@
     "title": "Ground velocity",
     "description": "Reading from a sensor providing information about the ground velocity",
     "required": [
-        "sensor_id",
-        "location",
+        "observation_id",
         "sog",
         "cog"
     ],
     "properties": {
-        "sensor_id": {
+        "observation_id": {
             "type": "string",
-            "title": "Physical sensor id",
-            "desciption": "Id of the reporting physical sensor equipment"
-        },
-        "location": {
-            "description": "Location of the reporting sensor in the BF frame of reference.",
-            "$ref": "../core/location.json"
+            "title": "Observation id",
+            "desciption": "Platform unique observation id"
         },
         "sog": {
             "type": "number",
