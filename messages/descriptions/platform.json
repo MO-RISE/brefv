@@ -5,7 +5,6 @@
     "description": "A description of a platform including metadata of the platform itself, available sensors and produced observations",
     "required": [
         "platform_id",
-        "metadata",
         "sensors"
     ],
     "properties": {
@@ -17,23 +16,7 @@
         "metadata": {
             "type": "object",
             "title": "Metadata",
-            "description": "Metadata of this platform",
-            "required": [
-                "length",
-                "breadth"
-            ],
-            "properties": {
-                "length": {
-                    "type": "number",
-                    "title": "Length",
-                    "description": "Physical length of the platform"
-                },
-                "breadth": {
-                    "type": "number",
-                    "title": "Breadth",
-                    "description": "Physical breadth of the platform"
-                }
-            }
+            "description": "Metadata of this platform"
         },
         "sensors": {
             "type": "array",

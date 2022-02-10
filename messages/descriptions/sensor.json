@@ -16,7 +16,7 @@
         "metadata": {
             "type": "object",
             "title": "Metadata",
-            "description": "Metadata of this platform"
+            "description": "Metadata of this sensor"
         },
         "observations": {
             "type": "array",
