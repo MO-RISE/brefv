@@ -19,6 +19,16 @@
             "title": "Speed over ground [knots]",
             "description": "Reported speed over ground."
         },
+        "sog_transverse": {
+            "type": "number",
+            "title": "Speed over ground transverse [knots]",
+            "description": "Reported speed over ground transverse."
+        },
+        "sog_longships": {
+            "type": "number",
+            "title": "Speed over ground longships [knots]",
+            "description": "Reported speed over ground longships."
+        },
         "cog": {
             "type": "number",
             "title": "Course over ground",
