@@ -4,19 +4,14 @@
     "title": "Position",
     "description": "Reading from a position sensor",
     "required": [
-        "sensor_id",
-        "location",
+        "observation_id",
         "position"
     ],
     "properties": {
-        "sensor_id": {
+        "observation_id": {
             "type": "string",
-            "title": "Physical sensor id",
-            "desciption": "Id of the reporting physical sensor equipment"
-        },
-        "location": {
-            "description": "Location of the reporting sensor in the BF frame of reference.",
-            "$ref": "../core/location.json"
+            "title": "Observation id",
+            "desciption": "Platform unique observation id"
         },
         "position": {
             "$ref": "../core/position.json"

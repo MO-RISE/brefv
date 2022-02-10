@@ -4,14 +4,14 @@
     "title": "Rate of turn",
     "description": "Reading from a rate of turn sensor",
     "required": [
-        "sensor_id",
+        "observation_id",
         "rot"
     ],
     "properties": {
-        "sensor_id": {
+        "observation_id": {
             "type": "string",
-            "title": "Physical sensor id",
-            "desciption": "Id of the reporting physical sensor equipment"
+            "title": "Observation id",
+            "desciption": "Platform unique observation id"
         },
         "rot": {
             "type": "number",

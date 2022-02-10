@@ -4,14 +4,14 @@
     "title": "Propeller",
     "description": "Reading from a propeller sensor",
     "required": [
-        "sensor_id",
+        "observation_id",
         "rpm"
     ],
     "properties": {
-        "sensor_id": {
+        "observation_id": {
             "type": "string",
-            "title": "Physical sensor id",
-            "desciption": "Id of the reporting physical sensor equipment"
+            "title": "Observation id",
+            "desciption": "Platform unique observation id"
         },
         "rpm": {
             "type": "number",
@@ -22,10 +22,6 @@
             "type": "number",
             "title": "Pitch angle",
             "description": "Propeller pitch angle"
-        },
-        "location": {
-            "description": "Location of the propeller in the BF frame of reference.",
-            "$ref": "../core/location.json"
         },
         "wrench": {
             "$ref": "../core/wrench.json"

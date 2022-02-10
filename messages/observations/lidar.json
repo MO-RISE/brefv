@@ -5,24 +5,14 @@
     "description": "Reading from a LIDAR sensor",
     "default": {},
     "required": [
-        "sensor_id",
-        "location",
-        "rotation",
+        "observation_id",
         "points"
     ],
     "properties": {
-        "sensor_id": {
+        "observation_id": {
             "type": "string",
-            "title": "Physical sensor id",
-            "desciption": "Id of the reporting physical sensor equipment"
-        },
-        "location": {
-            "description": "Location of the reporting sensor in the BF frame of reference.",
-            "$ref": "../core/location.json"
-        },
-        "rotation": {
-            "description": "Rotation of the reporting sensor in the BF frame of reference.",
-            "$ref": "../core/rotation.json"
+            "title": "Observation id",
+            "desciption": "Platform unique observation id"
         },
         "points": {
             "type": "array",

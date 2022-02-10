@@ -4,17 +4,17 @@
     "title": "AIS Vessel",
     "description": "Data of a specific vessel communicated through AIS messages.",
     "required": [
-        "sensor_id",
+        "observation_id",
         "timestamp",
         "mmsi",
         "class",
         "position"
     ],
     "properties": {
-        "sensor_id": {
+        "observation_id": {
             "type": "string",
-            "title": "Physical sensor id",
-            "desciption": "Id of the reporting physical sensor equipment"
+            "title": "Observation id",
+            "desciption": "Platform unique observation id"
         },
         "timestamp": {
             "type": "string",
