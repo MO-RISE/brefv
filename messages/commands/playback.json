@@ -8,6 +8,11 @@
         "playback_speed"
     ],
     "properties": {
+        "actuator": {
+            "type": "string",
+            "title": "Actuator id",
+            "description": "Platform unique actuators id"
+        },
         "playback_speed": {
             "type": "number",
             "title": "Playback speed",

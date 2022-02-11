@@ -5,18 +5,19 @@
     "description": "Command given for water-jet steering unit",
     "required": [
         "command_id",
+        "bucket_angle",
         "bucket_angle"
     ],
     "properties": {
-        "command_id": {
+        "actuator": {
             "type": "string",
-            "title": "Command id",
-            "description": "Platform unique command id"
+            "title": "Actuator id",
+            "description": "Platform unique actuators id"
         },
         "angle": {
             "type": "number",
             "title": "Water-jet angle set",
-            "description": "Water-jet angle in degrees, positive when pushing water to starboard"
+            "description": "Water-jet angle in degrees, positive when pushing water to port"
         },
         "bucket_angle": {
             "type": "number",

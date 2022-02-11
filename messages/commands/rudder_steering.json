@@ -8,10 +8,10 @@
         "angle"
     ],
     "properties": {
-        "command_id": {
+        "actuator": {
             "type": "string",
-            "title": "Command id",
-            "description": "Platform unique command id"
+            "title": "Actuator id",
+            "description": "Platform unique actuators id"
         },
         "angle": {
             "type": "number",
