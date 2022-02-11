@@ -4,7 +4,7 @@
     "title": "Rudder Steering",
     "description": "Command given for rudder steering unit",
     "required": [
-        "observation_id",
+        "command_id",
         "angle"
     ],
     "properties": {
