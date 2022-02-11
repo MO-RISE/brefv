@@ -1,21 +1,21 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
-    "title": "Rudder Steering",
-    "description": "Command given for rudder steering unit",
+    "title": "Rudder",
+    "description": "Actuator for given rudder control unit",
     "required": [
-        "command_id",
-        "angle"
+        "actuator_id",
+        "angle_set"
     ],
     "properties": {
-        "actuator": {
+        "actuator_id": {
             "type": "string",
             "title": "Actuator id",
-            "description": "Platform unique actuators id"
+            "description": "The unique actuator id"
         },
-        "angle": {
+        "angle_set": {
             "type": "number",
-            "title": "Rudder angle set",
+            "title": "Rudder angle set value",
             "description": "Rudder angle in degrees, positive when trailing edge points to port"
         }
     }

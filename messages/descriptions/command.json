@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Commands description",
+  "description": "A description of a command including metadata of the command itself",
+  "required": ["command_id", "metadata"],
+  "properties": {
+
+    "command_id": {
+      "type": "string",
+      "title": "command_id",
+      "description": "Id of the reporting physical sensor, equipment or microservice"
+    },
+    
+    "metadata": {
+      "type": "object",
+      "title": "Metadata",
+      "description": "Metadata of this command"
+    }
+  }
+}

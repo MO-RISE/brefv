@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Equipment description",
+  "description": "A description of a equipment including metadata of the equipment itself and produced observations and actuators. It can be an digital component or physical equipment",
+  "required": ["equipment_id", "observations", "actuators", "commands"],
+
+  "properties": {
+    "equipment_id": {
+      "type": "string",
+      "title": "Physical equipment id",
+      "description": "Id of the equipment"
+    },
+
+    "equipment_type": {
+      "type": "string",
+      "title": "Physical equipment id",
+      "description": "Id of the equipment"
+    },
+
+    "metadata": {
+      "type": "object",
+      "title": "Metadata",
+      "description": "Metadata of this equipment"
+    },
+    "observations": {
+      "type": "array",
+      "title": "Observations",
+      "description": "List of observations produced by this equipment",
+      "items": {
+        "$ref": "../descriptions/observation.json"
+      }
+    },
+    "actuators": {
+      "type": "array",
+      "title": "Actuators",
+      "description": "List of actuators produced by this equipment",
+      "items": {
+        "$ref": "../descriptions/actuator.json"
+      }
+    },
+    "commands": {
+      "type": "array",
+      "title": "Commands",
+      "description": "List of commands produced by this equipment",
+      "items": {
+        "$ref": "../descriptions/command.json"
+      }
+    }
+  }
+}

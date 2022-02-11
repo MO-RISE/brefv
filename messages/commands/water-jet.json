@@ -9,7 +9,7 @@
         "bucket_angle"
     ],
     "properties": {
-        "actuator": {
+        "actuator_id": {
             "type": "string",
             "title": "Actuator id",
             "description": "Platform unique actuators id"
