@@ -5,7 +5,7 @@
     "description": "Command given for water-jet steering unit",
     "required": [
         "command_id",
-        "bucket_angle",
+        "angle",
         "bucket_angle"
     ],
     "properties": {
