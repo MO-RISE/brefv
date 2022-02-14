@@ -1,17 +1,17 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
-    "title": "Playback commands",
-    "description": "Command given to active playback session",
+    "title": "Playback command",
+    "description": "Command given to an active playback session",
     "required": [
-        "playback_id",
+        "command_id",
         "playback_speed"
     ],
     "properties": {
-        "actuator_id": {
+        "command_id": {
             "type": "string",
-            "title": "Actuator id",
-            "description": "Platform unique actuators id"
+            "title": "Command id",
+            "description": "Platform unique command id"
         },
         "playback_speed": {
             "type": "number",
@@ -23,6 +23,5 @@
             "title": "Start from",
             "description": "Start frame where position from where the playback will start or continue from"
         }
-      
     }
 }

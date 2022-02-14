@@ -2,29 +2,28 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
     "title": "Actuator description",
-    "description": "A description of a actuator for a given physical unit or accepted input to microservice",
+    "description": "A description of a actuator for a given physical/digital unit",
     "required": [
         "sensor_id",
-        "observations"
+        "commands"
     ],
     "properties": {
-    
         "actuator_id": {
             "type": "string",
-            "title": "actuator_id",
+            "title": "Actuator id",
             "description": "Id of the actuator"
         },
         "metadata": {
             "type": "object",
             "title": "Metadata",
-            "description": "Metadata on this actuator"
+            "description": "Metadata of this actuator"
         },
-        "observations": {
+        "commands": {
             "type": "array",
-            "title": "Observations",
-            "description": "List of actuator available on unit",
+            "title": "Commands",
+            "description": "List of commands accepted by this actuator",
             "items": {
-                "$ref": "../descriptions/observation.json"
+                "$ref": "../descriptions/command.json"
             }
         }
     }

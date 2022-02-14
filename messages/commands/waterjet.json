@@ -1,27 +1,27 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
-    "title": "Water-jet steering",
-    "description": "Command given for water-jet steering unit",
+    "title": "Waterjet command",
+    "description": "Command given to a waterjet actuator",
     "required": [
         "command_id",
-        "angle",
-        "bucket_angle"
+        "angle_set",
+        "bucket_angle_set"
     ],
     "properties": {
-        "actuator_id": {
+        "command_id": {
             "type": "string",
-            "title": "Actuator id",
+            "title": "Command id",
             "description": "Platform unique actuators id"
         },
-        "angle": {
+        "angle_set": {
             "type": "number",
-            "title": "Water-jet angle set",
+            "title": "Waterjet angle set",
             "description": "Water-jet angle in degrees, positive when pushing water to port"
         },
-        "bucket_angle": {
+        "bucket_angle_set": {
             "type": "number",
-            "title": "Water-jet bucket angle set",
+            "title": "Waterjet bucket angle set",
             "description": "Water-jet angle in degrees, positive when bucket letting water flow aft"
         }
     }

@@ -1,55 +1,30 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
-  "title": "Sensor description",
-  "description": "A description of a sensor including metadata of the sensor itself and produced observations",
-  "required": ["sensor_id", "observations"],
-  "properties": {
-    
-    "sensor_id": {
-      "type": "string",
-      "title": "Physical sensor id",
-      "description": "Id of the reporting physical sensor equipment"
-    },
-    
-    "sensor_type": {
-        "type": "string",
-        "title": "Physical sensor type",
-        "enum": ["ruder", "gnss", "lidar", "ais", "imu"],
-        "description": "Type of sensor for categorization and grouping of sensors"
-      },
-
-    "metadata": {
-      "type": "object",
-      "title": "Metadata",
-      "description": "Metadata of this sensor"
-    },
-
-    "observations": {
-      "type": "array",
-      "title": "Observations",
-      "description": "List of observations produced by this sensor",
-      "items": {
-        "$ref": "../descriptions/observation.json"
-      }
-    },
-
-    "actuators": {
-      "type": "array",
-      "title": "Actuators",
-      "description": "List of observations associated with this sensor",
-      "items": {
-        "$ref": "../descriptions/actuator.json"
-      }
-    },
-
-    "commands": {
-      "type": "array",
-      "title": "Commands",
-      "description": "List of commands associated with a observations for give sensor",
-      "items": {
-        "$ref": "../descriptions/command.json"
-      }
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "title": "Sensor description",
+    "description": "A description of a sensor including metadata of the sensor itself and produced observations",
+    "required": [
+        "sensor_id",
+        "observations"
+    ],
+    "properties": {
+        "sensor_id": {
+            "type": "string",
+            "title": "Physical sensor id",
+            "description": "Id of the reporting physical sensor equipment"
+        },
+        "metadata": {
+            "type": "object",
+            "title": "Metadata",
+            "description": "Metadata of this sensor"
+        },
+        "observations": {
+            "type": "array",
+            "title": "Observations",
+            "description": "List of observations produced by this sensor",
+            "items": {
+                "$ref": "../descriptions/observation.json"
+            }
+        }
     }
-  }
 }

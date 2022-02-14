@@ -3,23 +3,19 @@
     "type": "object",
     "title": "Observation description",
     "description": "A description of an observation",
-
     "required": [
         "observation_id"
     ],
     "properties": {
-
         "observation_id": {
             "type": "string",
             "title": "Observation id",
-            "description": "Platforms own observation id"
+            "description": "Platform unique observation id"
         },
-
         "location": {
             "description": "Location in the BF frame of reference to which the observation refers.",
             "$ref": "../core/location.json"
         },
-        
         "rotation": {
             "description": "Rotation in the BF frame of reference to which the observation refers.",
             "$ref": "../core/rotation.json"

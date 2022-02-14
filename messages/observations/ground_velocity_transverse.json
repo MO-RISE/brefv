@@ -16,7 +16,7 @@
         "sog": {
             "type": "number",
             "title": "Speed over ground [knots]",
-            "description": "Reported speed over ground."
+            "description": "Reported speed over ground in the transverse direction. Positive to starboard."
         }
     }
 }

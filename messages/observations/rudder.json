@@ -24,6 +24,16 @@
             "description": "Rudder flap angle in degrees, positive when trailing edge points to port",
             "default": 0.0
         },
+        "angle_set": {
+            "type": "number",
+            "title": "Rudder angle set value",
+            "description": "Rudder angle in degrees, positive when trailing edge points to port"
+        },
+        "flap_angle_set": {
+            "type": "number",
+            "title": "Rudder flap angle",
+            "description": "Rudder flap angle in degrees, positive when trailing edge points to port"
+        },
         "wrench": {
             "$ref": "../core/wrench.json"
         }
