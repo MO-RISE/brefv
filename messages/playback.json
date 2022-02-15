@@ -4,15 +4,9 @@
     "title": "Playback command",
     "description": "Command given to an active playback session",
     "required": [
-        "command_id",
         "playback_speed"
     ],
     "properties": {
-        "command_id": {
-            "type": "string",
-            "title": "Command id",
-            "description": "Platform unique command id"
-        },
         "playback_speed": {
             "type": "number",
             "title": "Playback speed",
