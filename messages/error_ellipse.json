@@ -1,21 +1,14 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "type": "object",
-    "title": "Position",
-    "description": "Reading from a position sensor",
+    "title": "Error ellipse",
+    "description": "Error ellipse reading from a GNSS sensor",
     "required": [
-        "observation_id",
-        "position"
+        "semi_major_axis",
+        "semi_minor_axis",
+        "azimuth"
     ],
     "properties": {
-        "observation_id": {
-            "type": "string",
-            "title": "Observation id",
-            "desciption": "Platform unique observation id"
-        },
-        "position": {
-            "$ref": "../core/position.json"
-        },
         "semi_major_axis": {
             "type": "number",
             "title": "Semi-major axis",

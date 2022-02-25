@@ -28,7 +28,9 @@ jobs:
     - name: Check validity of json schemas
       run: |
         jsonschema -i envelope.json meta_schema.json
-        for f in messages/*/*.json; do jsonschema -i $f meta_schema.json; done
+        for f in messages/*.json; do echo $f; jsonschema -i $f meta_schema.json; done
+        for f in descriptions/*.json; do echo $f; jsonschema -i $f meta_schema.json; done
+        for f in descriptions/*/*.json; do echo $f; jsonschema -i $f meta_schema.json; done
 
   model_generation:
 
@@ -46,4 +48,5 @@ jobs:
     - name: Check that we can generate pydantic models from the schemas
       run: |
         datamodel-codegen --input envelope.json --input-file-type jsonschema --output envelope.py
-        datamodel-codegen --input messages --input-file-type jsonschema  --reuse-model --output output
+        datamodel-codegen --input messages --input-file-type jsonschema  --reuse-model --output messages_output
+        datamodel-codegen --input descriptions --input-file-type jsonschema  --reuse-model --output descriptions_output
