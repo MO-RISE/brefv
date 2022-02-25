@@ -18,6 +18,12 @@
             "title": "Metadata",
             "description": "Metadata of this platform"
         },
+      "platform_type": {
+          "type": "string",
+          "title": "Platform type",
+          "enum": ["vessel", "land-sensor-station", "remote-control-center"],
+          "description": "Cateforization of the platform"
+    },
         "devices": {
             "type": "array",
             "title": "Devices",
